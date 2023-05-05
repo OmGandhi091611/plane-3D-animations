@@ -10,6 +10,7 @@ import { Airplane } from "./Airplane";
 import { Background } from "./Background";
 import { Cloud } from "./Cloud";
 import { TextSection } from "./TextSection";
+import { Speed } from "./Speed";
 
 const LINE_NB_POINTS = 1000;
 const CURVE_DISTANCE = 250;
@@ -501,6 +502,7 @@ The basics of rendering 3d animations`,
         <directionalLight position={[0, 3, 1]} intensity={0.1} />
         {/* <OrbitControls /> */}
         <group ref={cameraGroup}>
+          <Speed />
           <Background backgroundColors={backgroundColors} />
           <group ref={cameraRail}>
             <PerspectiveCamera
